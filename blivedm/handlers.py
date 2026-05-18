@@ -144,8 +144,9 @@ class BaseHandler(HandlerInterface):
         if cmd not in self._CMD_CALLBACK_DICT:
             # 只有第一次遇到未知cmd时打日志
             if cmd not in logged_unknown_cmds:
-                logger.warning('room=%d unknown cmd=%s, command=%s', client.room_id, cmd, command)
-                logged_unknown_cmds.add(cmd)
+                pass
+                # logger.warning('room=%d unknown cmd=%s, command=%s', client.room_id, cmd, command)
+                # logged_unknown_cmds.add(cmd)
             return
 
         callback = self._CMD_CALLBACK_DICT[cmd]
